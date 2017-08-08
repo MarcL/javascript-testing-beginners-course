@@ -6,7 +6,7 @@
 
 This is the code repository for a 7 day mini-course which aims to get you started with JavaScript testing. It'll be delivered via email and will have accompanying videos to help you understand the basics of JavaScript unit testing. You'll start with some easy tests using a test runner and test assertions. You'll then discover how you can use test doubles in order to fake responses in order to better isolate your code.
 
-Interested in learning more? Just sign up for the [JavaScript Testing Mini-Course](https://www.marclittlemore.com/courses/javascript-testing-made-easy/?signup=github-mini-course) on my website.
+Interested in learning more? Just sign up for the [JavaScript Testing Mini-Course](https://www.marclittlemore.com/courses/javascript-testing-beginners-course/?signup=github-mini-course) on my website.
 
 ## What you'll learn
 
