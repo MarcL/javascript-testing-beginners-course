@@ -4,7 +4,7 @@ import requestPromise from 'request-promise';
 // Use GitHub API to get info about project
 // Retrieve star, watch and fork count
 // Handle errors
-function day3() {
+function day5() {
     const gitHubRepoGetUrl = 'https://api.github.com/repos/expressjs/express';
     const requestOptions = {
         uri: gitHubRepoGetUrl,
@@ -32,4 +32,4 @@ function day3() {
         });
 }
 
-export default day3;
+export default day5;
