@@ -25,6 +25,7 @@ function day3() {
         })
         .catch((error) => {
             return {
+                errorCode: error.statusCode,
                 success: false,
                 error: 'API request is rate limited'
             };

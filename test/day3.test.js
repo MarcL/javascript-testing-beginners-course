@@ -110,6 +110,7 @@ describe('day3 tests', () => {
             return day3()
                 .then((data) => {
                     expect(data.success).to.be.false;
+                    expect(data.errorCode).to.equal(403);
                     expect(data.error)
                         .to.deep.equal('API request is rate limited');
                 });
