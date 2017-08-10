@@ -1,10 +1,11 @@
 import {expect} from 'chai';
 import sinon from 'sinon';
 import requestPromise from 'request-promise';
+import {StatusCodeError} from 'request-promise/errors';
 import day3 from '../src/day3';
 
 describe('day3 tests', () => {
-    describe.only('GitHub API - not unit tests - spy on API', () => {
+    describe('GitHub API - not unit tests - spy on API', () => {
         let spyRequestGet;
 
         beforeEach(() => {
@@ -104,13 +105,13 @@ describe('day3 tests', () => {
                 'message': 'API rate limit exceeded for xxx.xxx.xxx.xxx. (But here\'s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)',
                 'documentation_url': 'https://developer.github.com/v3/#rate-limiting'
             };
-            stubRequestGet.resolves(givenApiResponse);
+            stubRequestGet.rejects(new StatusCodeError(403, givenApiResponse));
 
             return day3()
                 .then((data) => {
-                    expect(data.succes).to.be.false;
+                    expect(data.success).to.be.false;
                     expect(data.error)
-                        .to.equal('API request is rate limited');
+                        .to.deep.equal('API request is rate limited');
                 });
         });
     });

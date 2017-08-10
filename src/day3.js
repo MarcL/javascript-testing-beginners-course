@@ -11,7 +11,7 @@ function day3() {
         resolveWithFullResponse: true,
         json: true,
         headers: {
-            // 'User-Agent': 'JavaScript Testing Beginners Course'
+            'User-Agent': 'JavaScript Testing Beginners Course'
         }
     };
 
@@ -24,7 +24,10 @@ function day3() {
             };
         })
         .catch((error) => {
-            console.log(error.statusCode);
+            return {
+                success: false,
+                error: 'API request is rate limited'
+            };
         });
 }
 
