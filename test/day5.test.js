@@ -2,7 +2,7 @@ import {expect} from 'chai';
 import sinon from 'sinon';
 import requestPromise from 'request-promise';
 import {StatusCodeError} from 'request-promise/errors';
-import day3 from '../src/day3';
+import day3 from '../src/day5';
 
 describe('day3 tests', () => {
     describe('GitHub API - not unit tests - spy on API', () => {
