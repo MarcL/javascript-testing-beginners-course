@@ -2,9 +2,9 @@ import {expect} from 'chai';
 import sinon from 'sinon';
 import requestPromise from 'request-promise';
 import {StatusCodeError} from 'request-promise/errors';
-import day3 from '../src/day5';
+import day5 from '../src/day5';
 
-describe('day3 tests', () => {
+describe('day5 tests', () => {
     describe('GitHub API - not unit tests - spy on API', () => {
         let spyRequestGet;
 
@@ -17,7 +17,7 @@ describe('day3 tests', () => {
         });
 
         it('should call the expected endpoint once', () => {
-            return day3()
+            return day5()
                 .then(() => {
                     expect(spyRequestGet.callCount).to.equal(1);
                 });
@@ -25,7 +25,7 @@ describe('day3 tests', () => {
 
         it('should call the expected endpoint url', () => {
             const expectedGitHubUrl = 'https://api.github.com/repos/expressjs/express';
-            return day3()
+            return day5()
                 .then((data) => {
                     expect(spyRequestGet.getCall(0).args[0].uri)
                         .to.equal(expectedGitHubUrl);
@@ -46,7 +46,7 @@ describe('day3 tests', () => {
         });
 
         it('should call the expected endpoint once', () => {
-            return day3()
+            return day5()
                 .then(() => {
                     expect(stubRequestGet.callCount).to.equal(1);
                 });
@@ -54,7 +54,7 @@ describe('day3 tests', () => {
 
         it('should call the expected endpoint url', () => {
             const expectedGitHubUrl = 'https://api.github.com/repos/expressjs/express';
-            return day3()
+            return day5()
                 .then(() => {
                     expect(stubRequestGet.getCall(0).args[0].uri)
                         .to.equal(expectedGitHubUrl);
@@ -67,7 +67,7 @@ describe('day3 tests', () => {
             };
             stubRequestGet.resolves(givenApiResponse);
 
-            return day3()
+            return day5()
                 .then((data) => {
                     expect(data.stars)
                         .to.equal(givenApiResponse.stargazers_count);
@@ -80,7 +80,7 @@ describe('day3 tests', () => {
             };
             stubRequestGet.resolves(givenApiResponse);
 
-            return day3()
+            return day5()
                 .then((data) => {
                     expect(data.forks)
                         .to.equal(givenApiResponse.forks_count);
@@ -93,7 +93,7 @@ describe('day3 tests', () => {
             };
             stubRequestGet.resolves(givenApiResponse);
 
-            return day3()
+            return day5()
                 .then((data) => {
                     expect(data.watchers)
                         .to.equal(givenApiResponse.watchers_count);
@@ -107,7 +107,7 @@ describe('day3 tests', () => {
             };
             stubRequestGet.rejects(new StatusCodeError(403, givenApiResponse));
 
-            return day3()
+            return day5()
                 .then((data) => {
                     expect(data.success).to.be.false;
                     expect(data.errorCode).to.equal(403);
