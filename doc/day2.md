@@ -57,7 +57,7 @@ export default day2;
 * Using BDD intergace - also TDD style which uses suite and test
 
 ```javascript
-import day2 from '../src/day';
+import day2 from '../src/day2';
 
 describe('day 2 tests', () => {
     it('', () => {
