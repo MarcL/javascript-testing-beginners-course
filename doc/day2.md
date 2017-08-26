@@ -2,10 +2,16 @@
 
 ## Create project directory
 
-* mkdir js-testing
-* cd js-testing
+Get started by creating your test directory
+
+```shell
+mkdir javascript-testing-beginners-course
+cd javascript-testing-beginners-course
+```
 
 ## Create blank npm package file
+
+Create a default `npm` package file using the `init` command and fill in some default values:
 
 ```shell
 npm init -y
@@ -13,26 +19,32 @@ npm init -y
 
 ## Install packages we need for testing
 
+You'll use [mocha](https://mochajs.org/) for the test runner but it doesn't come with an assertion library by default. Install [chai](http://chaijs.com/) for some expressive assertions which make your tests easy to read.
+
 ```shell
 npm install --save-dev mocha chai
 ```
 
 ## Install babel for ES6 transpilation
 
-* babel-register - Automatically compile files on the fly by binding to Node require
-* babel-preset-env - Automatically determine babel plugins + polyfills needed
+I prefer to use ES6 syntax for my JavaScript. Install [babel](https://babeljs.io/) and some plugins to allow you to transpile to ES5 on the fly. You'll install:
+
+* [babel-register](https://babeljs.io/docs/usage/babel-register/) - Automatically compile files on the fly by binding to Node require
+* [babel-preset-env](https://github.com/babel/babel-preset-env) - Automatically determine babel plugins + polyfills needed
 
 ```shell
 npm install --save-dev babel-register babel-preset-env
 ```
 
-* Create a babel file for the preset
+### Create a babel file for the preset
 
 ```shell
 touch .babelrc
 ```
 
-* Edit .babelrc
+### Edit .babelrc
+
+Add the followng JSON code to the `.babelrc` file to enable the default preset plugin:
 
 ```json
 {
@@ -42,8 +54,15 @@ touch .babelrc
 
 ### Create a src file and test file
 
-* In your editor create a directory for source and test
-* Create src function and export it
+* In your editor create a directory for source and test files
+
+```shell
+mkdir src
+mkdir test
+```
+
+* Create a file called `day2.js` in the `src` directory.
+* Export it as the default function
 
 ```javascript
 function day2() {
@@ -52,9 +71,7 @@ function day2() {
 export default day2;
 ```
 
-* Create test script
-* 2 main functions - describe and it
-* Using BDD intergace - also TDD style which uses suite and test
+* Create a file called `day2.test.js` in the `test` directory.
 
 ```javascript
 import day2 from '../src/day2';
@@ -65,6 +82,8 @@ describe('day 2 tests', () => {
 });
 ```
 
+* Going to use 2 main functions - describe and it
+* Using BDD interface - also TDD style which uses suite and test
 * Run the tests
 
 ```shell
