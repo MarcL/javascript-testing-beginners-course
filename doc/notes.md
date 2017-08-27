@@ -31,20 +31,6 @@
 5. Date describer - tell us if the date is in the future
 6. Fake the current time
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Day 5 - GitHub stargazing with stubs & spies
 
 ## Day 6 - Simplify & automate your tests

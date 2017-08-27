@@ -14,7 +14,6 @@ describe('day 4 tests', () => {
         });
 
         it('should return expected value from callback', (done) => {
-
             timeout((returnedData) => {
                 expect(returnedData).to.equal('hello');
                 done();
