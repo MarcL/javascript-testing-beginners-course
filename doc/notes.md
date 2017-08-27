@@ -24,11 +24,12 @@
 
 ## Day 4 - Time travel with fake timers
 
-1. Install sinon
-2. Fake timer in test
-3. Use mocha to stub and restore timers
-4. Date code which displays different strings based on date
-5. Set fake date to now and tick to the future
+1. Speed up slow tests
+2. Use a fake timer
+3. Use sinon to stub and restore timers
+4. mocha beforeEach / afterEach
+5. Date describer - tell us if the date is in the future
+6. Fake the current time
 
 ## Day 5 - GitHub stargazing with stubs & spies
 
