@@ -1,37 +1,30 @@
-import requestPromise from 'request-promise';
+import request from 'request';
 
-// TODO:
-// Use GitHub API to get info about project
-// Retrieve star, watch and fork count
-// Handle errors
-function day5(owner, repository) {
-    const gitHubRepoGetUrl =
-        `https://api.github.com/repos/${owner}/${repository}`;
+function day5(owner, repository, callback) {
+    const gitHubUrl = `https://api.github.com/repos/${owner}/${repository}`;
 
     const requestOptions = {
-        uri: gitHubRepoGetUrl,
-        resolveWithFullResponse: true,
-        json: true,
+        uri: gitHubUrl,
         headers: {
-            'User-Agent': 'JavaScript Testing Beginners Course'
-        }
+            'User-Agent': 'JavaScript Testing For Beginners'
+        },
+        resolveWithFullResponse: true,
+        json: true
     };
 
-    return requestPromise.get(requestOptions)
-        .then((data) => {
-            return {
-                forks: data.forks_count,
-                stars: data.stargazers_count,
-                watchers: data.watchers_count
-            };
-        })
-        .catch((error) => {
-            return {
-                errorCode: error.statusCode,
+    request.get(requestOptions, (error, response, body) => {
+        if (response.statusCode == 403) {
+            callback({
                 success: false,
-                error: 'API request is rate limited'
-            };
-        });
+                statusCode: response.statusCode,
+                error: 'API is rate limited - try again later'
+            })
+        } else {
+            callback({
+                stars: body.stargazers_count
+            });
+        }
+    });
 }
 
 export default day5;
