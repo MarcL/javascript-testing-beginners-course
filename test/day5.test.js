@@ -58,7 +58,7 @@ describe('day5 tests', () => {
         });
 
         // Should make 1 request
-        it('should make once GET request', (done) => {
+        it('should make one GET request', (done) => {
             stubRequestGet.yields(
                 null,
                 {statusCode: 200},
