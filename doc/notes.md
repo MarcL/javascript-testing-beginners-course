@@ -31,7 +31,14 @@
 5. Date describer - tell us if the date is in the future
 6. Fake the current time
 
-## Day 5 - GitHub stargazing with stubs & spies
+## Day 5 - GitHub stargazing with spies & stubs
+
+1. Use GitHub API to get information about stars for a repository
+2. Use HTTP request with callback
+3. Use sinon to spy on request - still hit API
+4. Use sinon stub to stub HTTP request
+5. Yield to a callback - happy path
+6. Yield to a callback - error
 
 ## Day 6 - Simplify & automate your tests
 

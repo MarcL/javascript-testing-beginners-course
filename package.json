@@ -23,5 +23,8 @@
     "chai": "~4.1.1",
     "mocha": "~3.5.0",
     "sinon": "~3.2.1"
+  },
+  "dependencies": {
+    "request": "~2.81.0"
   }
 }
