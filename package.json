@@ -22,8 +22,6 @@
     "babel-register": "~6.24.1",
     "chai": "~4.1.1",
     "mocha": "~3.5.0",
-    "request": "~2.81.0",
-    "request-promise": "~4.2.1",
     "sinon": "~3.2.1"
   },
   "dependencies": {
