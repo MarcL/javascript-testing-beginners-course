@@ -40,26 +40,6 @@
 5. Yield to a callback - happy path
 6. Yield to a callback - error
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Day 6 - Simplify & automate your tests
 
 1. Put test call in package.json script
