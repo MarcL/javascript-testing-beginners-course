@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import day2 from '../src/day2';
+import day2 from '../../src/day2';
 
 describe('day2 tests', () => {
     describe('check data type', () => {

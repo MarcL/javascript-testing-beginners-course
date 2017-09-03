@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
     "babel-preset-env": "~1.6.0",
     "babel-register": "~6.24.1",
     "chai": "~4.1.1",
+    "husky": "~0.14.3",
     "mocha": "~3.5.0",
     "sinon": "~3.2.1"
   },

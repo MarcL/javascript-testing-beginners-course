@@ -1,6 +1,4 @@
-import sinon from 'sinon';
-import {expect} from 'chai';
-import {timeout, dateDescriber} from '../src/day4';
+import {timeout, dateDescriber} from '../../src/day4';
 
 describe('day 4 tests', () => {
     describe('timeout tests', () => {
