@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import day3 from '../src/day3';
+import day3 from '../../src/day3';
 
 describe('day 3 tests', () => {
     it('should return expected value from callback', (done) => {

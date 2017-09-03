@@ -42,14 +42,31 @@
 
 ## Day 6 - Simplify & automate your tests
 
-1. Put test call in package.json script
-2. Refactor tests using mocha.opts
-3. Add mocha watch command
-4. Skipping tests
-5. Isolating tests
-6. Increase timeouts
-7. Install husky
+1. Customising your package.json scripts
+2. Add mocha watch command
+3. Refactor tests using mocha.opts
+4. Recursive testing
+5. Skipping tests
+6. Isolating tests
+7. Install git hooks
 8. Run tests when commit or push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Day 7 - JavaScript testing recap
 
