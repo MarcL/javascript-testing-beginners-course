@@ -51,23 +51,6 @@
 7. Install git hooks
 8. Run tests when commit or push
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Day 7 - JavaScript testing recap
 
 * TODO
